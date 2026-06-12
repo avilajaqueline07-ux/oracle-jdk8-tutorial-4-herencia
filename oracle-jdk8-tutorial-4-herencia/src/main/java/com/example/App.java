@@ -44,5 +44,8 @@ public class App {
     	
     	Empleado empleado4 = new Empleado("Ana", "Gomez", "Perez",
     			Genero.FEMENINO, new BigDecimal(3000.50), Departamento.RRHH);
+    	
+    	// Mostrar el horario de comida del empleado4
+    	empleado4.MuestraHorarioDeComida();
     }
 }

@@ -77,6 +77,12 @@ public class Empleado extends Persona {
 				+ super.toString() + "]";
 	}
 
+	@Override
+	public void MuestraHorarioDeComida() {
+		// TODO Auto-generated method stub
+		System.out.println("un empleado como entre 14:00 y 15:30 horas");
+	}
+
 	
 	
 }

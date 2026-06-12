@@ -52,5 +52,8 @@ public class Persona extends Object {
 	public void setGenero(Genero genero) {
 		this.genero = genero;
 	}
-
+// Metodo que muestra el horario de comida de una persona
+	public void MuestraHorarioDeComida() {
+		System.out.println("una persona como enytre 13:00 y 16:00 horas");
+	}
 }
