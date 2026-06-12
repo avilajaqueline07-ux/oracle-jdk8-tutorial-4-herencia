@@ -1,10 +1,48 @@
 package com.example;
 
-/**
- * Hello world!
- */
+import java.math.BigDecimal;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+     
+    	// Ya, en este mismo momento se puede crear una instancia, es decir, un objeto
+    	// Empleado, aunque la clase empleado esta vacia. 
+    	// Pero Empleado hereda de Persona, y aunque explicitamente no se vea
+    	// tanto la clase Persona, como la clase Empleado, tienen un constructor
+    	// por defecto, sin parametros, que dejara de tener cuando se cree otro constructor
+    	
+    	Empleado empleado1 = new Empleado();
+    	
+    	empleado1.setNombre("Carlos ");
+    	empleado1.setPrimerApellido("Martinez");
+    	
+    	/* Si quisieramos crear un empleado que en el mismo momento de su creacion pudiesemos
+    	* pasarle todas las propiedades de la clase Persona */
+    	
+    	Empleado empleado2 = new Empleado("Maria", "Lopez", "Martinez", Genero.FEMENINO);
+    	
+    	Empleado empleado3 = new Empleado(new BigDecimal(2500.25), Departamento.CONTABILIDAD);
+    	
+    	/* Ejercicio # 1 del Viernes 12 de Junio
+    	* 
+    	* Al empleado3 agregarle como nombre "Miguel Angel", genero HOMBRE. Mostrar
+    	* por la consola la informacion del empleado 3 */
+    	
+    	empleado3.setNombre("Miguel Angel");
+        empleado3.setGenero(Genero.MASCULINO);
+        
+        		System.out.println("Nombre: " + empleado3.getNombre());
+        		System.out.println("Genero: " + empleado3.getGenero());
+       System.out.println("Salario: " + empleado3.getSalario());
+       System.out.println("Departamento: " + empleado3.getDepartamento());
+       
+     /*Ejercicio # 2 del Viernes 12 de Junio 
+       Imprimir la informacion en una sola sentencia */
+     //  System.out.println(empleado3);
+     
+    	System.out.println(empleado3.toString());
+    	
+    	Empleado empleado4 = new Empleado("Ana", "Gomez", "Perez",
+    			Genero.FEMENINO, new BigDecimal(3000.50), Departamento.RRHH);
     }
 }
